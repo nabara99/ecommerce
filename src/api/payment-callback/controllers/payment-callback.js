@@ -11,7 +11,7 @@ module.exports = createCoreController(
   ({ strapi }) => ({
     async create(ctx) {
       let request = ctx.request.body;
-      console.log("request", request);
+      // console.log("request", request);
 
       let order = await strapi
         .service("api::order.order")
@@ -29,7 +29,7 @@ module.exports = createCoreController(
         .service("api::order.order")
         .update(request.order_id, params);
 
-      console.log("update data", updateOrder);
+      // console.log("update data", updateOrder);
 
       return { data: updateOrder };
     },
