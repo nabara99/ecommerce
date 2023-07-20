@@ -10,7 +10,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
     const result = await super.create(ctx);
 
-    console.log("result", result);
+    // console.log("result", result);
 
     const midtransClient = require("midtrans-client");
     // Create Snap API instance
